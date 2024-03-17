@@ -1,7 +1,8 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\src"
   ],
-  "SelectedNode": "\\build_tools.sh",
+  "SelectedNode": "\\src\\trainer_card.c",
   "PreviewInSolutionExplorer": false
 }
