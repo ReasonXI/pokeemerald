@@ -1964,8 +1964,8 @@
     {
       "id": "LAYOUT_SECRET_BASE_RED_CAVE1",
       "name": "SecretBase_RedCave1_Layout",
-      "width": 11,
-      "height": 9,
+      "width": 20,
+      "height": 16,
       "primary_tileset": "gTileset_SecretBase",
       "secondary_tileset": "gTileset_SecretBaseRedCave",
       "border_filepath": "data/layouts/SecretBase_RedCave1/border.bin",
@@ -1974,8 +1974,8 @@
     {
       "id": "LAYOUT_SECRET_BASE_BROWN_CAVE1",
       "name": "SecretBase_BrownCave1_Layout",
-      "width": 11,
-      "height": 9,
+      "width": 25,
+      "height": 15,
       "primary_tileset": "gTileset_SecretBase",
       "secondary_tileset": "gTileset_SecretBaseBrownCave",
       "border_filepath": "data/layouts/SecretBase_BrownCave1/border.bin",
