@@ -336,7 +336,11 @@ BattleFrontier_ExchangeServiceCorner_EventScript_ChooseHoldItem::
 	case 6, BattleFrontier_ExchangeServiceCorner_EventScript_KingsRock
 	case 7, BattleFrontier_ExchangeServiceCorner_EventScript_FocusBand
 	case 8, BattleFrontier_ExchangeServiceCorner_EventScript_ScopeLens
-	case 9, BattleFrontier_ExchangeServiceCorner_EventScript_ClerkGoodbye
+	case 9, BattleFrontier_ExchangeServiceCorner_EventScript_EonTicket
+	case 10, BattleFrontier_ExchangeServiceCorner_EventScript_AuroraTicket
+	case 11, BattleFrontier_ExchangeServiceCorner_EventScript_MysticTicket
+	case 12, BattleFrontier_ExchangeServiceCorner_EventScript_OldSeaMap
+	case 13, BattleFrontier_ExchangeServiceCorner_EventScript_ClerkGoodbye
 	case MULTI_B_PRESSED, BattleFrontier_ExchangeServiceCorner_EventScript_ClerkGoodbye
 	end
 
@@ -409,6 +413,38 @@ BattleFrontier_ExchangeServiceCorner_EventScript_ScopeLens::
 	goto_if_eq VAR_RESULT, NO, BattleFrontier_ExchangeServiceCorner_EventScript_ChooseHoldItem
 	setvar VAR_0x8008, 64
 	setvar VAR_0x8009, ITEM_SCOPE_LENS
+	goto BattleFrontier_ExchangeServiceCorner_EventScript_TryPurchasePrize
+	end
+
+	BattleFrontier_ExchangeServiceCorner_EventScript_EonTicket::
+	msgbox BattleFrontier_ExchangeServiceCorner_Text_ConfirmScopeLens, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, BattleFrontier_ExchangeServiceCorner_EventScript_ChooseHoldItem
+	setvar VAR_0x8008, 300
+	setvar VAR_0x8009, ITEM_EON_TICKET
+	goto BattleFrontier_ExchangeServiceCorner_EventScript_TryPurchasePrize
+	end
+		
+	BattleFrontier_ExchangeServiceCorner_EventScript_AuroraTicket::
+	msgbox BattleFrontier_ExchangeServiceCorner_Text_ConfirmScopeLens, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, BattleFrontier_ExchangeServiceCorner_EventScript_ChooseHoldItem
+	setvar VAR_0x8008, 300
+	setvar VAR_0x8009, ITEM_AURORA_TICKET
+	goto BattleFrontier_ExchangeServiceCorner_EventScript_TryPurchasePrize
+	end
+
+	BattleFrontier_ExchangeServiceCorner_EventScript_MysticTicket::
+	msgbox BattleFrontier_ExchangeServiceCorner_Text_ConfirmScopeLens, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, BattleFrontier_ExchangeServiceCorner_EventScript_ChooseHoldItem
+	setvar VAR_0x8008, 300
+	setvar VAR_0x8009, ITEM_MYSTIC_TICKET
+	goto BattleFrontier_ExchangeServiceCorner_EventScript_TryPurchasePrize
+	end
+
+	BattleFrontier_ExchangeServiceCorner_EventScript_OldSeaMap::
+	msgbox BattleFrontier_ExchangeServiceCorner_Text_ConfirmScopeLens, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, BattleFrontier_ExchangeServiceCorner_EventScript_ChooseHoldItem
+	setvar VAR_0x8008, 300
+	setvar VAR_0x8009, ITEM_OLD_SEA_MAP
 	goto BattleFrontier_ExchangeServiceCorner_EventScript_TryPurchasePrize
 	end
 
@@ -563,6 +599,22 @@ BattleFrontier_ExchangeServiceCorner_Text_ConfirmScopeLens:
 
 BattleFrontier_ExchangeServiceCorner_Text_ConfirmLeftovers:
 	.string "You've chosen the LEFTOVERS.\n"
+	.string "Is that correct?$"
+
+BattleFrontier_ExchangeServiceCorner_Text_ConfirmEonTicket:
+	.string "You've chosen the EON Ticket.\n"
+	.string "Is that correct?$"
+
+BattleFrontier_ExchangeServiceCorner_Text_ConfirmAuroraTicket:
+	.string "You've chosen the Aurora Ticket.\n"
+	.string "Is that correct?$"
+
+BattleFrontier_ExchangeServiceCorner_Text_ConfirmMysticTicket:
+	.string "You've chosen the Mystic Ticket.\n"
+	.string "Is that correct?$"
+
+	BattleFrontier_ExchangeServiceCorner_Text_ConfirmOldSeaMap:
+	.string "You've chosen the Old Sea Map.\n"
 	.string "Is that correct?$"
 
 BattleFrontier_ExchangeServiceCorner_Text_WellSendItToPC:
@@ -723,3 +775,15 @@ BattleFrontier_ExchangeServiceCorner_Text_FocusBandDesc::
 BattleFrontier_ExchangeServiceCorner_Text_ScopeLensDesc::
 	.string "A hold item that raises the\n"
 	.string "critical-hit rate.$"
+
+BattleFrontier_ExchangeServiceCorner_Text_EonTicketDesc::
+	.string "The Eon Ticket.$"
+
+BattleFrontier_ExchangeServiceCorner_Text_AuroraTicketDesc::
+	.string "The Aurora Ticket.$"
+
+BattleFrontier_ExchangeServiceCorner_Text_MysticTicketDesc::
+	.string "A mysterious Ticket.$"
+
+BattleFrontier_ExchangeServiceCorner_Text_OldSeaMapDesc::
+.string "An old Sea Map.$"

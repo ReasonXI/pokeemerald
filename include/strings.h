@@ -700,6 +700,10 @@ extern const u8 gText_ChoiceBand64BP[];
 extern const u8 gText_KingsRock64BP[];
 extern const u8 gText_FocusBand64BP[];
 extern const u8 gText_ScopeLens64BP[];
+extern const u8 gText_EonTicket300BP[];
+extern const u8 gText_AuroraTicket300BP[];
+extern const u8 gText_MysticTicket300BP[];
+extern const u8 gText_OldSeaMap300BP[];
 
 extern const u8 gText_EnergyPowder50[];
 extern const u8 gText_EnergyRoot80[];
@@ -866,6 +870,10 @@ extern const u8 BattleFrontier_ExchangeServiceCorner_Text_ChoiceBandDesc[];
 extern const u8 BattleFrontier_ExchangeServiceCorner_Text_KingsRockDesc[];
 extern const u8 BattleFrontier_ExchangeServiceCorner_Text_FocusBandDesc[];
 extern const u8 BattleFrontier_ExchangeServiceCorner_Text_ScopeLensDesc[];
+extern const u8 BattleFrontier_ExchangeServiceCorner_Text_EonTicketDesc[];
+extern const u8 BattleFrontier_ExchangeServiceCorner_Text_AuroraTicketDesc[];
+extern const u8 BattleFrontier_ExchangeServiceCorner_Text_MysticTicketDesc[];
+extern const u8 BattleFrontier_ExchangeServiceCorner_Text_OldSeaMapDesc[];
 
 // Battle Frontier Move Tutors
 extern const u8 BattleFrontier_Lounge7_Text_SoftboiledDesc[];
