@@ -1,10 +1,11 @@
 {
   "ExpandedNodes": [
     "",
-    "\\data",
-    "\\data\\maps",
-    "\\data\\maps\\Route117"
+    "\\data\\maps\\Route117",
+    "\\data\\maps\\Route117_EVolutionMart",
+    "\\src",
+    "\\src\\data"
   ],
-  "SelectedNode": "\\data\\maps\\Route117\\scripts.inc",
+  "SelectedNode": "\\src\\data\\items.h",
   "PreviewInSolutionExplorer": false
 }
