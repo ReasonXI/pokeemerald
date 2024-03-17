@@ -417,7 +417,7 @@ BattleFrontier_ExchangeServiceCorner_EventScript_ScopeLens::
 	end
 
 	BattleFrontier_ExchangeServiceCorner_EventScript_EonTicket::
-	msgbox BattleFrontier_ExchangeServiceCorner_Text_ConfirmScopeLens, MSGBOX_YESNO
+	msgbox BattleFrontier_ExchangeServiceCorner_Text_ConfirmEonTicket, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, BattleFrontier_ExchangeServiceCorner_EventScript_ChooseHoldItem
 	setvar VAR_0x8008, 300
 	setvar VAR_0x8009, ITEM_EON_TICKET
@@ -425,7 +425,7 @@ BattleFrontier_ExchangeServiceCorner_EventScript_ScopeLens::
 	end
 		
 	BattleFrontier_ExchangeServiceCorner_EventScript_AuroraTicket::
-	msgbox BattleFrontier_ExchangeServiceCorner_Text_ConfirmScopeLens, MSGBOX_YESNO
+	msgbox BattleFrontier_ExchangeServiceCorner_Text_ConfirmAuroraTicket, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, BattleFrontier_ExchangeServiceCorner_EventScript_ChooseHoldItem
 	setvar VAR_0x8008, 300
 	setvar VAR_0x8009, ITEM_AURORA_TICKET
@@ -433,7 +433,7 @@ BattleFrontier_ExchangeServiceCorner_EventScript_ScopeLens::
 	end
 
 	BattleFrontier_ExchangeServiceCorner_EventScript_MysticTicket::
-	msgbox BattleFrontier_ExchangeServiceCorner_Text_ConfirmScopeLens, MSGBOX_YESNO
+	msgbox BattleFrontier_ExchangeServiceCorner_Text_ConfirmMysticTicket, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, BattleFrontier_ExchangeServiceCorner_EventScript_ChooseHoldItem
 	setvar VAR_0x8008, 300
 	setvar VAR_0x8009, ITEM_MYSTIC_TICKET
@@ -441,7 +441,7 @@ BattleFrontier_ExchangeServiceCorner_EventScript_ScopeLens::
 	end
 
 	BattleFrontier_ExchangeServiceCorner_EventScript_OldSeaMap::
-	msgbox BattleFrontier_ExchangeServiceCorner_Text_ConfirmScopeLens, MSGBOX_YESNO
+	msgbox BattleFrontier_ExchangeServiceCorner_Text_ConfirmOldSeaMap, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, BattleFrontier_ExchangeServiceCorner_EventScript_ChooseHoldItem
 	setvar VAR_0x8008, 300
 	setvar VAR_0x8009, ITEM_OLD_SEA_MAP
@@ -613,7 +613,7 @@ BattleFrontier_ExchangeServiceCorner_Text_ConfirmMysticTicket:
 	.string "You've chosen the Mystic Ticket.\n"
 	.string "Is that correct?$"
 
-	BattleFrontier_ExchangeServiceCorner_Text_ConfirmOldSeaMap:
+BattleFrontier_ExchangeServiceCorner_Text_ConfirmOldSeaMap:
 	.string "You've chosen the Old Sea Map.\n"
 	.string "Is that correct?$"
 
