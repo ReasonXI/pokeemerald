@@ -1,7 +1,10 @@
 {
   "ExpandedNodes": [
     "",
-    "\\src"
+    "\\data",
+    "\\data\\maps",
+    "\\data\\maps\\Route117"
   ],
+  "SelectedNode": "\\data\\maps\\Route117\\scripts.inc",
   "PreviewInSolutionExplorer": false
 }
