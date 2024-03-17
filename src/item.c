@@ -187,9 +187,7 @@ bool8 CheckBagHasSpace(u16 itemId, u16 count)
     }
 
     pocket = ItemId_GetPocket(itemId) - 1;
-    if (pocket != BERRIES_POCKET)
-        slotCapacity = MAX_BAG_ITEM_CAPACITY;
-    else
+    
         slotCapacity = MAX_BERRY_CAPACITY;
 
     // Check space in any existing item slots that already contain this item
