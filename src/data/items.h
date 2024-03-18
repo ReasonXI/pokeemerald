@@ -3288,7 +3288,8 @@ const struct Item gItems[] =
         .importance = 1,
         .pocket = POCKET_KEY_ITEMS,
         .type = ITEM_USE_BAG_MENU,
-        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .fieldUseFunc = ItemUseOutOfBattle_SootSack,
+        .secondaryId = 0,
     },
 
     [ITEM_BASEMENT_KEY] =

@@ -31,6 +31,8 @@ void ItemUseInBattle_PPRecovery(u8);
 void ItemUseInBattle_Escape(u8);
 void ItemUseInBattle_EnigmaBerry(u8);
 void Task_UseDigEscapeRopeOnField(u8 taskId);
+void ItemUseOutOfBattle_SootSack(u8);
+u16 GetAshCount(void);
 u8 CanUseDigOrEscapeRopeOnCurMap(void);
 u8 CheckIfItemIsTMHMOrEvolutionStone(u16 itemId);
 
