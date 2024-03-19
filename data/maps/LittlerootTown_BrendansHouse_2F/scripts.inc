@@ -288,11 +288,11 @@ PlayersHouse_2F_Text_HowDoYouLikeYourRoom:
 
 PlayersHouse_2F_Text_Notebook:
 	.string "{PLAYER} flipped open the notebook.\p"
-	.string "ADVENTURE RULE NO. 1\n"
-	.string "Open the MENU with START.\p"
-	.string "ADVENTURE RULE NO. 2\n"
-	.string "Record your progress with SAVE.\p"
-	.string "The remaining pages are blank…$"
+	.string "You're playing Pokémon Emerald\n"
+	.string "Remastered Edition created by Reason.\p"
+	.string "Special thanks goes to:\n"
+	.string "Kayrecx, Kasen, pret, TeamAquasHideout.\p"
+	.string "Enjoy playing!$"
 
 Common_Text_LookCloserAtMap:
 	.string "{PLAYER} took a closer look at the\n"
