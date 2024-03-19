@@ -2271,7 +2271,7 @@ void ShowScrollableMultichoice(void)
         break;
     case SCROLL_MULTI_GLASS_WORKSHOP_VENDOR:
         task->tMaxItemsOnScreen = MAX_SCROLL_MULTI_ON_SCREEN - 1;
-        task->tNumItems = 8;
+        task->tNumItems = 22;
         task->tLeft = 1;
         task->tTop = 1;
         task->tWidth = 9;
@@ -2402,6 +2402,20 @@ static const u8 *const sScrollableMultichoiceOptions[][MAX_SCROLL_MULTI_LENGTH] 
         gText_BlackFlute,
         gText_PrettyChair,
         gText_PrettyDesk,
+        gText_RazzBerry, 
+        gText_BlukBerry,
+        gText_NanabBerry,
+        gText_WepearBerry,
+        gText_PinapBerry,
+        gText_CornnBerry,
+        gText_MagostBerry,
+        gText_RabutaBerry,
+        gText_NomelBerry,
+        gText_SpelonBerry,
+        gText_PamtreBerry,
+        gText_WatmelBerry,
+        gText_DurinBerry,
+        gText_BelueBerry,
         gText_Exit
     },
     [SCROLL_MULTI_POKEMON_FAN_CLUB_RATER] =

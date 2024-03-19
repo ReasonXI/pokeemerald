@@ -9,7 +9,21 @@ Route113_GlassWorkshop_MapScripts::
 	.set BLACK_FLUTE_PRICE,  1000
 	.set PRETTY_CHAIR_PRICE, 6000
 	.set PRETTY_DESK_PRICE,  8000
-	.set LOWEST_ASH_PRICE,   BLUE_FLUTE_PRICE
+	.set LOWEST_ASH_PRICE, BLUE_FLUTE_PRICE
+	.set RAZZ_BERRY_PRICE, 250
+	.set BLUK_BERRY_PRICE, 250
+	.set NANAB_BERRY_PRICE, 250
+	.set WEPEAR_BERRY_PRICE, 250
+	.set PINAP_BERRY_PRICE, 250
+	.set CORNN_BERRY_PRICE, 250
+	.set MAGOST_BERRY_PRICE, 250
+	.set RABUTA_BERRY_PRICE, 250
+	.set NOMEL_BERRY_PRICE, 250
+	.set SPELON_BERRY_PRICE, 250
+	.set PAMTRE_BERRY_PRICE, 250
+	.set WATMEL_BERRY_PRICE, 250
+	.set DURIN_BERRY_PRICE, 250
+	.set BELUE_BERRY_PRICE, 250
 
 Route113_GlassWorkshop_OnTransition:
 	setflag FLAG_LANDMARK_GLASS_WORKSHOP
@@ -66,7 +80,21 @@ Route113_GlassWorkshop_EventScript_ChooseGlassItem::
 	case 4, Route113_GlassWorkshop_EventScript_BlackFlute
 	case 5, Route113_GlassWorkshop_EventScript_PrettyChair
 	case 6, Route113_GlassWorkshop_EventScript_PrettyDesk
-	case 7, Route113_GlassWorkshop_EventScript_CancelGlassItemSelect
+	case 7, Route113_GlassWorkshop_EventScript_RazzBerry
+	case 8, Route113_GlassWorkshop_EventScript_BlukBerry
+	case 9, Route113_GlassWorkshop_EventScript_NanabBerry
+	case 10, Route113_GlassWorkshop_EventScript_WepearBerry
+	case 11, Route113_GlassWorkshop_EventScript_PinapBerry
+	case 12, Route113_GlassWorkshop_EventScript_CornnBerry
+	case 13, Route113_GlassWorkshop_EventScript_MagostBerry
+	case 14, Route113_GlassWorkshop_EventScript_RabutaBerry
+	case 15, Route113_GlassWorkshop_EventScript_NomelBerry
+	case 16, Route113_GlassWorkshop_EventScript_SpelonBerry
+	case 17, Route113_GlassWorkshop_EventScript_PamtreBerry
+	case 18, Route113_GlassWorkshop_EventScript_WatmelBerry
+	case 19, Route113_GlassWorkshop_EventScript_DurinBerry
+	case 20, Route113_GlassWorkshop_EventScript_BelueBerry
+	case 21, Route113_GlassWorkshop_EventScript_CancelGlassItemSelect
 	case MULTI_B_PRESSED, Route113_GlassWorkshop_EventScript_CancelGlassItemSelect
 	end
 
@@ -156,6 +184,174 @@ Route113_GlassWorkshop_EventScript_PrettyDesk::
 	goto Route113_GlassWorkshop_EventScript_MakeGlassItem
 	end
 
+Route113_GlassWorkshop_EventScript_RazzBerry::
+	setvar VAR_0x8008, ITEM_RAZZ_BERRY
+	bufferitemname STR_VAR_1, VAR_0x8008
+	setvar VAR_0x800A, RAZZ_BERRY_PRICE
+	goto_if_lt VAR_ASH_GATHER_COUNT, RAZZ_BERRY_PRICE, Route113_GlassWorkshop_EventScript_NotEnoughAshForItem
+	msgbox Route113_GlassWorkshop_Text_IsThatTheItemForYou, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, Route113_GlassWorkshop_EventScript_ChooseDifferentItem
+	setvar VAR_GLASS_WORKSHOP_STATE, 17
+	subvar VAR_ASH_GATHER_COUNT, RAZZ_BERRY_PRICE
+	goto Route113_GlassWorkshop_EventScript_MakeGlassItem
+	end
+
+Route113_GlassWorkshop_EventScript_BlukBerry::
+	setvar VAR_0x8008, ITEM_BLUK_BERRY
+	bufferitemname STR_VAR_1, VAR_0x8008
+	setvar VAR_0x800A, BLUK_BERRY_PRICE
+	goto_if_lt VAR_ASH_GATHER_COUNT, BLUK_BERRY_PRICE, Route113_GlassWorkshop_EventScript_NotEnoughAshForItem
+	msgbox Route113_GlassWorkshop_Text_IsThatTheItemForYou, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, Route113_GlassWorkshop_EventScript_ChooseDifferentItem
+	setvar VAR_GLASS_WORKSHOP_STATE, 18
+	subvar VAR_ASH_GATHER_COUNT, BLUK_BERRY_PRICE
+	goto Route113_GlassWorkshop_EventScript_MakeGlassItem
+	end
+
+Route113_GlassWorkshop_EventScript_NanabBerry::
+	setvar VAR_0x8008, ITEM_NANAB_BERRY
+	bufferitemname STR_VAR_1, VAR_0x8008
+	setvar VAR_0x800A, NANAB_BERRY_PRICE
+	goto_if_lt VAR_ASH_GATHER_COUNT, NANAB_BERRY_PRICE, Route113_GlassWorkshop_EventScript_NotEnoughAshForItem
+	msgbox Route113_GlassWorkshop_Text_IsThatTheItemForYou, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, Route113_GlassWorkshop_EventScript_ChooseDifferentItem
+	setvar VAR_GLASS_WORKSHOP_STATE, 19
+	subvar VAR_ASH_GATHER_COUNT, NANAB_BERRY_PRICE
+	goto Route113_GlassWorkshop_EventScript_MakeGlassItem
+	end
+
+	Route113_GlassWorkshop_EventScript_WepearBerry::
+	setvar VAR_0x8008, ITEM_WEPEAR_BERRY
+	bufferitemname STR_VAR_1, VAR_0x8008
+	setvar VAR_0x800A, WEPEAR_BERRY_PRICE
+	goto_if_lt VAR_ASH_GATHER_COUNT, WEPEAR_BERRY_PRICE, Route113_GlassWorkshop_EventScript_NotEnoughAshForItem
+	msgbox Route113_GlassWorkshop_Text_IsThatTheItemForYou, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, Route113_GlassWorkshop_EventScript_ChooseDifferentItem
+	setvar VAR_GLASS_WORKSHOP_STATE, 20
+	subvar VAR_ASH_GATHER_COUNT, WEPEAR_BERRY_PRICE
+	goto Route113_GlassWorkshop_EventScript_MakeGlassItem
+	end
+
+Route113_GlassWorkshop_EventScript_PinapBerry::
+	setvar VAR_0x8008, ITEM_PINAP_BERRY
+	bufferitemname STR_VAR_1, VAR_0x8008
+	setvar VAR_0x800A, PINAP_BERRY_PRICE
+	goto_if_lt VAR_ASH_GATHER_COUNT, PINAP_BERRY_PRICE, Route113_GlassWorkshop_EventScript_NotEnoughAshForItem
+	msgbox Route113_GlassWorkshop_Text_IsThatTheItemForYou, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, Route113_GlassWorkshop_EventScript_ChooseDifferentItem
+	setvar VAR_GLASS_WORKSHOP_STATE, 21
+	subvar VAR_ASH_GATHER_COUNT, PINAP_BERRY_PRICE
+	goto Route113_GlassWorkshop_EventScript_MakeGlassItem
+	end
+
+	Route113_GlassWorkshop_EventScript_CornnBerry::
+	setvar VAR_0x8008, ITEM_CORNN_BERRY
+	bufferitemname STR_VAR_1, VAR_0x8008
+	setvar VAR_0x800A, CORNN_BERRY_PRICE
+	goto_if_lt VAR_ASH_GATHER_COUNT, CORNN_BERRY_PRICE, Route113_GlassWorkshop_EventScript_NotEnoughAshForItem
+	msgbox Route113_GlassWorkshop_Text_IsThatTheItemForYou, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, Route113_GlassWorkshop_EventScript_ChooseDifferentItem
+	setvar VAR_GLASS_WORKSHOP_STATE, 22
+	subvar VAR_ASH_GATHER_COUNT, CORNN_BERRY_PRICE
+	goto Route113_GlassWorkshop_EventScript_MakeGlassItem
+	end
+
+	Route113_GlassWorkshop_EventScript_MagostBerry::
+	setvar VAR_0x8008, ITEM_MAGOST_BERRY
+	bufferitemname STR_VAR_1, VAR_0x8008
+	setvar VAR_0x800A, MAGOST_BERRY_PRICE
+	goto_if_lt VAR_ASH_GATHER_COUNT, MAGOST_BERRY_PRICE, Route113_GlassWorkshop_EventScript_NotEnoughAshForItem
+	msgbox Route113_GlassWorkshop_Text_IsThatTheItemForYou, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, Route113_GlassWorkshop_EventScript_ChooseDifferentItem
+	setvar VAR_GLASS_WORKSHOP_STATE, 23
+	subvar VAR_ASH_GATHER_COUNT, MAGOST_BERRY_PRICE
+	goto Route113_GlassWorkshop_EventScript_MakeGlassItem
+	end
+
+	Route113_GlassWorkshop_EventScript_RabutaBerry::
+	setvar VAR_0x8008, ITEM_RABUTA_BERRY
+	bufferitemname STR_VAR_1, VAR_0x8008
+	setvar VAR_0x800A, RABUTA_BERRY_PRICE
+	goto_if_lt VAR_ASH_GATHER_COUNT, RABUTA_BERRY_PRICE, Route113_GlassWorkshop_EventScript_NotEnoughAshForItem
+	msgbox Route113_GlassWorkshop_Text_IsThatTheItemForYou, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, Route113_GlassWorkshop_EventScript_ChooseDifferentItem
+	setvar VAR_GLASS_WORKSHOP_STATE, 24
+	subvar VAR_ASH_GATHER_COUNT, RABUTA_BERRY_PRICE
+	goto Route113_GlassWorkshop_EventScript_MakeGlassItem
+	end
+
+	Route113_GlassWorkshop_EventScript_NomelBerry::
+	setvar VAR_0x8008, ITEM_NOMEL_BERRY
+	bufferitemname STR_VAR_1, VAR_0x8008
+	setvar VAR_0x800A, NOMEL_BERRY_PRICE
+	goto_if_lt VAR_ASH_GATHER_COUNT, NOMEL_BERRY_PRICE, Route113_GlassWorkshop_EventScript_NotEnoughAshForItem
+	msgbox Route113_GlassWorkshop_Text_IsThatTheItemForYou, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, Route113_GlassWorkshop_EventScript_ChooseDifferentItem
+	setvar VAR_GLASS_WORKSHOP_STATE, 25
+	subvar VAR_ASH_GATHER_COUNT, NOMEL_BERRY_PRICE
+	goto Route113_GlassWorkshop_EventScript_MakeGlassItem
+	end
+
+	Route113_GlassWorkshop_EventScript_SpelonBerry::
+	setvar VAR_0x8008, ITEM_SPELON_BERRY
+	bufferitemname STR_VAR_1, VAR_0x8008
+	setvar VAR_0x800A, SPELON_BERRY_PRICE
+	goto_if_lt VAR_ASH_GATHER_COUNT, SPELON_BERRY_PRICE, Route113_GlassWorkshop_EventScript_NotEnoughAshForItem
+	msgbox Route113_GlassWorkshop_Text_IsThatTheItemForYou, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, Route113_GlassWorkshop_EventScript_ChooseDifferentItem
+	setvar VAR_GLASS_WORKSHOP_STATE, 26
+	subvar VAR_ASH_GATHER_COUNT, SPELON_BERRY_PRICE
+	goto Route113_GlassWorkshop_EventScript_MakeGlassItem
+	end
+
+	Route113_GlassWorkshop_EventScript_PamtreBerry::
+	setvar VAR_0x8008, ITEM_PAMTRE_BERRY
+	bufferitemname STR_VAR_1, VAR_0x8008
+	setvar VAR_0x800A, SPELON_BERRY_PRICE
+	goto_if_lt VAR_ASH_GATHER_COUNT, PAMTRE_BERRY_PRICE, Route113_GlassWorkshop_EventScript_NotEnoughAshForItem
+	msgbox Route113_GlassWorkshop_Text_IsThatTheItemForYou, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, Route113_GlassWorkshop_EventScript_ChooseDifferentItem
+	setvar VAR_GLASS_WORKSHOP_STATE, 27
+	subvar VAR_ASH_GATHER_COUNT, PAMTRE_BERRY_PRICE
+	goto Route113_GlassWorkshop_EventScript_MakeGlassItem
+	end
+
+	Route113_GlassWorkshop_EventScript_WatmelBerry::
+	setvar VAR_0x8008, ITEM_WATMEL_BERRY
+	bufferitemname STR_VAR_1, VAR_0x8008
+	setvar VAR_0x800A, WATMEL_BERRY_PRICE
+	goto_if_lt VAR_ASH_GATHER_COUNT, WATMEL_BERRY_PRICE, Route113_GlassWorkshop_EventScript_NotEnoughAshForItem
+	msgbox Route113_GlassWorkshop_Text_IsThatTheItemForYou, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, Route113_GlassWorkshop_EventScript_ChooseDifferentItem
+	setvar VAR_GLASS_WORKSHOP_STATE, 28
+	subvar VAR_ASH_GATHER_COUNT, WATMEL_BERRY_PRICE
+	goto Route113_GlassWorkshop_EventScript_MakeGlassItem
+	end
+
+	Route113_GlassWorkshop_EventScript_DurinBerry::
+	setvar VAR_0x8008, ITEM_DURIN_BERRY
+	bufferitemname STR_VAR_1, VAR_0x8008
+	setvar VAR_0x800A, DURIN_BERRY_PRICE
+	goto_if_lt VAR_ASH_GATHER_COUNT, DURIN_BERRY_PRICE, Route113_GlassWorkshop_EventScript_NotEnoughAshForItem
+	msgbox Route113_GlassWorkshop_Text_IsThatTheItemForYou, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, Route113_GlassWorkshop_EventScript_ChooseDifferentItem
+	setvar VAR_GLASS_WORKSHOP_STATE, 29
+	subvar VAR_ASH_GATHER_COUNT, DURIN_BERRY_PRICE
+	goto Route113_GlassWorkshop_EventScript_MakeGlassItem
+	end
+
+	Route113_GlassWorkshop_EventScript_BelueBerry::
+	setvar VAR_0x8008, ITEM_BELUE_BERRY
+	bufferitemname STR_VAR_1, VAR_0x8008
+	setvar VAR_0x800A, BELUE_BERRY_PRICE
+	goto_if_lt VAR_ASH_GATHER_COUNT, BELUE_BERRY_PRICE, Route113_GlassWorkshop_EventScript_NotEnoughAshForItem
+	msgbox Route113_GlassWorkshop_Text_IsThatTheItemForYou, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, Route113_GlassWorkshop_EventScript_ChooseDifferentItem
+	setvar VAR_GLASS_WORKSHOP_STATE, 30
+	subvar VAR_ASH_GATHER_COUNT, BELUE_BERRY_PRICE
+	goto Route113_GlassWorkshop_EventScript_MakeGlassItem
+	end
+
 Route113_GlassWorkshop_EventScript_CancelGlassItemSelect::
 	msgbox Route113_GlassWorkshop_Text_AllThatAshButDontWantAnything, MSGBOX_DEFAULT
 	release
@@ -228,6 +424,20 @@ Route113_GlassWorkshop_EventScript_GiveItemAfterNoRoom::
 	case 14, Route113_GlassWorkshop_EventScript_GiveBlackFlute
 	case 15, Route113_GlassWorkshop_EventScript_GivePrettyChair
 	case 16, Route113_GlassWorkshop_EventScript_GivePrettyDesk
+	case 17, Route113_GlassWorkshop_EventScript_GiveRazzBerry
+	case 18, Route113_GlassWorkshop_EventScript_GiveBlukBerry
+	case 19, Route113_GlassWorkshop_EventScript_GiveNanabBerry
+	case 20, Route113_GlassWorkshop_EventScript_GiveWepearBerry
+	case 21, Route113_GlassWorkshop_EventScript_GivePinapBerry
+	case 22, Route113_GlassWorkshop_EventScript_GiveCornnBerry
+	case 23, Route113_GlassWorkshop_EventScript_GiveMagostBerry
+	case 24, Route113_GlassWorkshop_EventScript_GiveRabutaBerry
+	case 25, Route113_GlassWorkshop_EventScript_GiveNomelBerry
+	case 26, Route113_GlassWorkshop_EventScript_GiveSpelonBerry
+	case 27, Route113_GlassWorkshop_EventScript_GivePamtreBerry
+	case 28, Route113_GlassWorkshop_EventScript_GiveWatmelBerry
+	case 29, Route113_GlassWorkshop_EventScript_GiveDurinBerry
+	case 30, Route113_GlassWorkshop_EventScript_GiveBelueBerry
 	end
 
 Route113_GlassWorkshop_EventScript_GiveBlueFlute::
@@ -279,6 +489,104 @@ Route113_GlassWorkshop_EventScript_GivePrettyDesk::
 	goto Route113_GlassWorkshop_EventScript_TryGiveItemAgain
 	end
 
+	Route113_GlassWorkshop_EventScript_GiveRazzBerry::
+	setvar VAR_0x8009, 0
+	setvar VAR_0x8008, ITEM_RAZZ_BERRY
+	bufferitemname STR_VAR_1, VAR_0x8008
+	goto Route113_GlassWorkshop_EventScript_TryGiveItemAgain
+	end
+
+	Route113_GlassWorkshop_EventScript_GiveBlukBerry::
+	setvar VAR_0x8009, 0
+	setvar VAR_0x8008, ITEM_BLUK_BERRY
+	bufferitemname STR_VAR_1, VAR_0x8008
+	goto Route113_GlassWorkshop_EventScript_TryGiveItemAgain
+	end
+
+	Route113_GlassWorkshop_EventScript_GiveNanabBerry::
+	setvar VAR_0x8009, 0
+	setvar VAR_0x8008, ITEM_NANAB_BERRY
+	bufferitemname STR_VAR_1, VAR_0x8008
+	goto Route113_GlassWorkshop_EventScript_TryGiveItemAgain
+	end
+
+	Route113_GlassWorkshop_EventScript_GiveWepearBerry::
+	setvar VAR_0x8009, 0
+	setvar VAR_0x8008, ITEM_WEPEAR_BERRY
+	bufferitemname STR_VAR_1, VAR_0x8008
+	goto Route113_GlassWorkshop_EventScript_TryGiveItemAgain
+	end
+
+	Route113_GlassWorkshop_EventScript_GivePinapBerry::
+	setvar VAR_0x8009, 0
+	setvar VAR_0x8008, ITEM_PINAP_BERRY
+	bufferitemname STR_VAR_1, VAR_0x8008
+	goto Route113_GlassWorkshop_EventScript_TryGiveItemAgain
+	end
+
+	Route113_GlassWorkshop_EventScript_GiveCornnBerry::
+	setvar VAR_0x8009, 0
+	setvar VAR_0x8008, ITEM_CORNN_BERRY
+	bufferitemname STR_VAR_1, VAR_0x8008
+	goto Route113_GlassWorkshop_EventScript_TryGiveItemAgain
+	end
+
+	Route113_GlassWorkshop_EventScript_GiveMagostBerry::
+	setvar VAR_0x8009, 0
+	setvar VAR_0x8008, ITEM_MAGOST_BERRY
+	bufferitemname STR_VAR_1, VAR_0x8008
+	goto Route113_GlassWorkshop_EventScript_TryGiveItemAgain
+	end
+
+	Route113_GlassWorkshop_EventScript_GiveRabutaBerry::
+	setvar VAR_0x8009, 0
+	setvar VAR_0x8008, ITEM_RABUTA_BERRY
+	bufferitemname STR_VAR_1, VAR_0x8008
+	goto Route113_GlassWorkshop_EventScript_TryGiveItemAgain
+	end
+
+	Route113_GlassWorkshop_EventScript_GiveNomelBerry::
+	setvar VAR_0x8009, 0
+	setvar VAR_0x8008, ITEM_NOMEL_BERRY
+	bufferitemname STR_VAR_1, VAR_0x8008
+	goto Route113_GlassWorkshop_EventScript_TryGiveItemAgain
+	end
+
+	Route113_GlassWorkshop_EventScript_GiveSpelonBerry::
+	setvar VAR_0x8009, 0
+	setvar VAR_0x8008, ITEM_SPELON_BERRY
+	bufferitemname STR_VAR_1, VAR_0x8008
+	goto Route113_GlassWorkshop_EventScript_TryGiveItemAgain
+	end
+
+	Route113_GlassWorkshop_EventScript_GivePamtreBerry::
+	setvar VAR_0x8009, 0
+	setvar VAR_0x8008, ITEM_PAMTRE_BERRY
+	bufferitemname STR_VAR_1, VAR_0x8008
+	goto Route113_GlassWorkshop_EventScript_TryGiveItemAgain
+	end
+
+	Route113_GlassWorkshop_EventScript_GiveWatmelBerry::
+	setvar VAR_0x8009, 0
+	setvar VAR_0x8008, ITEM_WATMEL_BERRY
+	bufferitemname STR_VAR_1, VAR_0x8008
+	goto Route113_GlassWorkshop_EventScript_TryGiveItemAgain
+	end
+
+	Route113_GlassWorkshop_EventScript_GiveDurinBerry::
+	setvar VAR_0x8009, 0
+	setvar VAR_0x8008, ITEM_DURIN_BERRY
+	bufferitemname STR_VAR_1, VAR_0x8008
+	goto Route113_GlassWorkshop_EventScript_TryGiveItemAgain
+	end
+
+	Route113_GlassWorkshop_EventScript_GiveBelueBerry::
+	setvar VAR_0x8009, 0
+	setvar VAR_0x8008, ITEM_BELUE_BERRY
+	bufferitemname STR_VAR_1, VAR_0x8008
+	goto Route113_GlassWorkshop_EventScript_TryGiveItemAgain
+	end
+
 Route113_GlassWorkshop_EventScript_TryGiveItemAgain::
 	msgbox Route113_GlassWorkshop_Text_IveFinishedGlassItem, MSGBOX_DEFAULT
 	call_if_eq VAR_0x8009, 0, Route113_GlassWorkshop_EventScript_GiveGlassFlute
@@ -293,9 +601,9 @@ Route113_GlassWorkshop_EventScript_NinjaBoy::
 
 Route113_GlassWorkshop_Text_GoCollectAshWithThis:
 	.string "This area is covered in volcanic ash,\n"
-	.string "huff-puff!\p"
 	.string "I'm specially gifted, huff-puff.\p"
-	.string "I make glass out of volcanic ash\n"
+	.string "The soil here is excellent for growing!"\p"
+	.string "Also I make glass out of volcanic ash\n"
 	.string "and make items, huff-puff.\p"
 	.string "Go collect ashes with this, huff-puff.$"
 
@@ -322,7 +630,7 @@ Route113_GlassWorkshop_Text_NotEnoughAshNeedX:
 Route113_GlassWorkshop_Text_WhichGlassItemWoudYouLike:
 	.string "Oh!\n"
 	.string "You've got a lot of ashes, huff-puff!\p"
-	.string "I'll make you a glass item, huff-puff!\n"
+	.string "I'll trade you an item, huff-puff!\n"
 	.string "Which one would you like, huff-puff?$"
 
 Route113_GlassWorkshop_Text_IsThatTheItemForYou:
@@ -334,18 +642,18 @@ Route113_GlassWorkshop_Text_WhichWouldYouLike:
 
 Route113_GlassWorkshop_Text_IllMakeItemForYou:
 	.string "A {STR_VAR_1} it is, then, huff-puff!\p"
-	.string "Okay! I'll make it for you, huff-puff.\n"
+	.string "Okay! I'll trade it with you, huff-puff.\n"
 	.string "Just wait a little while, huff-puff.$"
 
 Route113_GlassWorkshop_Text_NotEnoughAshToMakeItem:
 	.string "A {STR_VAR_1}, huff-puff?\p"
-	.string "There's not enough ash here to make\n"
+	.string "There's not enough ash to trade\n"
 	.string "that, though, huff-puff.\p"
 	.string "Let's see… {STR_VAR_2} is the number of steps\n"
 	.string "you'll need to walk through volcanic ash\l"
-	.string "for me to make that item, huff-puff.\p"
-	.string "Which item would you rather have me\n"
-	.string "make instead, huff-puff?$"
+	.string "for me to trade that item, huff-puff.\p"
+	.string "Which item would you rather have\n"
+	.string "instead, huff-puff?$"
 
 Route113_GlassWorkshop_Text_AllThatAshButDontWantAnything:
 	.string "You've collected all that ash, but you\n"
@@ -374,7 +682,7 @@ Route113_GlassWorkshop_Text_HaventGotYourSootSack:
 	.string "volcanic ash, huff-puff.$"
 
 Route113_GlassWorkshop_Text_FunToBlowGlassFlute:
-	.string "It's fun to blow a glass flute while\n"
-	.string "my boss is talking.\p"
-	.string "Huff-huff! Puff-puff!$"
+	.string "My Boss has a lot of berries in\n"
+	.string "his garden! He is exchanging\p"
+	.string "volcanic ash for berries!$"
 

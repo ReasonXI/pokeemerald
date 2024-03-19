@@ -42,7 +42,7 @@
 #define SCROLL_MULTI_BATTLE_TENT_RULES                    12
 
 #define MAX_SCROLL_MULTI_ON_SCREEN 6
-#define MAX_SCROLL_MULTI_LENGTH 16
+#define MAX_SCROLL_MULTI_LENGTH 22
 
 // Dept Store Floor Numbers
 #define DEPT_STORE_FLOORNUM_B4F       0
