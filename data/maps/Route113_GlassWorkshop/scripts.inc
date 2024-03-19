@@ -602,7 +602,7 @@ Route113_GlassWorkshop_EventScript_NinjaBoy::
 Route113_GlassWorkshop_Text_GoCollectAshWithThis:
 	.string "This area is covered in volcanic ash,\n"
 	.string "I'm specially gifted, huff-puff.\p"
-	.string "The soil here is excellent for growing!"\p"
+	.string "The soil here is excellent for growing!\p"
 	.string "Also I make glass out of volcanic ash\n"
 	.string "and make items, huff-puff.\p"
 	.string "Go collect ashes with this, huff-puff.$"
@@ -685,4 +685,3 @@ Route113_GlassWorkshop_Text_FunToBlowGlassFlute:
 	.string "My Boss has a lot of berries in\n"
 	.string "his garden! He is exchanging\p"
 	.string "volcanic ash for berries!$"
-
