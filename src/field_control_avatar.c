@@ -110,7 +110,7 @@ void FieldGetPlayerInput(struct FieldInput *input, u16 newKeys, u16 heldKeys)
             //tx_registered_items_menu
             if (newKeys & L_BUTTON && gSaveBlock2Ptr->optionsButtonMode != 2)
                 input->pressedListButton = TRUE;
-            else if (newKeys & R_BUTTON)
+            else if (newKeys & L_BUTTON)
                 input->pressedListButton = TRUE;
         }
 
