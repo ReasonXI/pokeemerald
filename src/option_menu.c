@@ -149,7 +149,7 @@ static void VBlankCB(void)
 
 void CB2_InitOptionMenu(void)
 {
-    if (useOptionPlusMenu)
+        if (useOptionPlusMenu)
     {
         CB2_InitOptionPlusMenu();
         return;
