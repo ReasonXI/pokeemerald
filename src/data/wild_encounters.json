@@ -2280,17 +2280,17 @@
               {
                 "min_level": 27,
                 "max_level": 27,
-                "species": "SPECIES_WOBBUFFET"
+                "species": "SPECIES_LUNATONE"
               },
               {
                 "min_level": 25,
                 "max_level": 25,
-                "species": "SPECIES_PIKACHU"
+                "species": "SPECIES_ROSELIA"
               },
               {
                 "min_level": 27,
                 "max_level": 27,
-                "species": "SPECIES_WOBBUFFET"
+                "species": "SPECIES_MEDICHAM"
               },
               {
                 "min_level": 27,
@@ -6973,7 +6973,7 @@
               {
                 "min_level": 25,
                 "max_level": 25,
-                "species": "SPECIES_PIKACHU"
+                "species": "SPECIES_ROSELIA"
               },
               {
                 "min_level": 27,
@@ -7008,7 +7008,7 @@
               {
                 "min_level": 30,
                 "max_level": 35,
-                "species": "SPECIES_PSYDUCK"
+                "species": "SPECIES_SURSKIT"
               },
               {
                 "min_level": 30,
@@ -7127,12 +7127,12 @@
               {
                 "min_level": 29,
                 "max_level": 29,
-                "species": "SPECIES_XATU"
+                "species": "SPECIES_MASQUERAIN"
               },
               {
                 "min_level": 27,
                 "max_level": 27,
-                "species": "SPECIES_HERACROSS"
+                "species": "SPECIES_MEDITITE"
               },
               {
                 "min_level": 31,
@@ -7236,7 +7236,7 @@
               {
                 "min_level": 31,
                 "max_level": 31,
-                "species": "SPECIES_DODRIO"
+                "species": "SPECIES_ZANGOOSE"
               },
               {
                 "min_level": 29,
@@ -7261,7 +7261,7 @@
               {
                 "min_level": 30,
                 "max_level": 35,
-                "species": "SPECIES_PSYDUCK"
+                "species": "SPECIES_SURSKIT"
               },
               {
                 "min_level": 30,
