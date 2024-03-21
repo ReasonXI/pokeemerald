@@ -4420,6 +4420,16 @@
       "secondary_tileset": "gTileset_Shop",
       "border_filepath": "data/layouts/Route117_EVolutionMart/border.bin",
       "blockdata_filepath": "data/layouts/Route117_EVolutionMart/map.bin"
+    },
+    {
+      "id": "LAYOUT_MYSTIC_CAVE",
+      "name": "MysticCave_Layout",
+      "width": 30,
+      "height": 30,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/MysticCave/border.bin",
+      "blockdata_filepath": "data/layouts/MysticCave/map.bin"
     }
   ]
 }
