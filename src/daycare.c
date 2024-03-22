@@ -454,14 +454,14 @@ static s32 GetParentToInheritNature(struct DayCare *daycare)
 
 static void _TriggerPendingDaycareEgg(struct DayCare *daycare)
 {
-    s32 parent;
+    u8 parent;
     s32 natureTries = 0;
 
     SeedRng2(gMain.vblankCounter2);
     parent = GetParentToInheritNature(daycare);
 
     // don't inherit nature
-    if (parent < 0)
+    if (parent > 1)
     {
         daycare->offspringPersonality = (Random2() << 16) | ((Random() % 0xfffe) + 1);
     }
@@ -728,13 +728,33 @@ void RejectEggFromDayCare(void)
     RemoveEggFromDayCare(&gSaveBlock1Ptr->daycare);
 }
 
-static void AlterEggSpeciesWithIncenseItem(u16 *species, struct DayCare *daycare)
+static u8 AlterEggSpeciesWithIncenseItem(u16 *species, struct DayCare *daycare)
 {
     u16 motherItem, fatherItem;
     if (*species == SPECIES_WYNAUT || *species == SPECIES_AZURILL)
     {
         motherItem = GetBoxMonData(&daycare->mons[0].mon, MON_DATA_HELD_ITEM);
         fatherItem = GetBoxMonData(&daycare->mons[1].mon, MON_DATA_HELD_ITEM);
+            if(motherItem == ITEM_EVERSTONE && fatherItem == ITEM_EVERSTONE)
+    {
+    	if (Random() >= USHRT_MAX / 2)
+            return 0;
+        else
+            return 1;
+    }else
+    {
+    	if(motherItem == ITEM_EVERSTONE)
+    	{
+    		return 0;
+    	}
+    	if(fatherItem == ITEM_EVERSTONE)
+    	{
+    		return 1;
+    	}
+    }
+    return 2;
+}
+        
         if (*species == SPECIES_WYNAUT && motherItem != ITEM_LAX_INCENSE && fatherItem != ITEM_LAX_INCENSE)
         {
             *species = SPECIES_WOBBUFFET;
@@ -745,7 +765,6 @@ static void AlterEggSpeciesWithIncenseItem(u16 *species, struct DayCare *daycare
             *species = SPECIES_MARILL;
         }
     }
-}
 
 static void GiveVoltTackleIfLightBall(struct Pokemon *mon, struct DayCare *daycare)
 {
