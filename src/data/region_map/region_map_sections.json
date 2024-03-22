@@ -1710,6 +1710,21 @@
       "y": 4,
       "width": 1,
       "height": 1
+    },
+    {"map_section": "MAPSEC_EVOLUTION_MART",
+    "name": "EVOLUTION MART",
+    "x": 5,
+    "y": 6,
+    "width": 3,
+    "height": 1
+  },
+    {
+      "map_section": "MAPSEC_MYSTERIOUS_CAVE",
+      "name": "MYSTERIOUS CAVE",
+      "x": 0,
+      "y": 0,
+      "width": 1,
+      "height": 1
     }
   ]
 }
