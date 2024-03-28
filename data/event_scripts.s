@@ -1063,3 +1063,7 @@ Common_EventScript_LegendaryFlewAway::
 	.include "data/maps/Route117_EVolutionMart/scripts.inc"
 
 	.include "data/maps/MysticCave/scripts.inc"
+
+	.include "data/maps/ForgottenCave/scripts.inc"
+
+	.include "data/maps/ShrineoftheBerrygod/scripts.inc"

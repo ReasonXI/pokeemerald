@@ -410,6 +410,13 @@
       "elevation": 0,
       "dest_map": "MAP_ARTISAN_CAVE_B1F",
       "dest_warp_id": "0"
+    },
+    {
+      "x": 43,
+      "y": 13,
+      "elevation": 0,
+      "dest_map": "MAP_FORGOTTEN_CAVE",
+      "dest_warp_id": "0"
     }
   ],
   "coord_events": [

@@ -2051,6 +2051,74 @@ LittlerootTown_EventScript_BerryfieldSign::
 	return
 
 
+LittlerootTown_EventScript_Shrine::
+# 1031 "data/maps/LittlerootTown/scripts.pory"
+	lockall
+# 1032 "data/maps/LittlerootTown/scripts.pory"
+	msgbox LittlerootTown_EventScript_Shrine_Text_0
+# 1033 "data/maps/LittlerootTown/scripts.pory"
+	msgbox LittlerootTown_EventScript_Shrine_Text_1
+# 1034 "data/maps/LittlerootTown/scripts.pory"
+	msgbox LittlerootTown_EventScript_Shrine_Text_2
+# 1035 "data/maps/LittlerootTown/scripts.pory"
+	msgbox LittlerootTown_EventScript_Shrine_Text_3
+# 1036 "data/maps/LittlerootTown/scripts.pory"
+	msgbox LittlerootTown_EventScript_Shrine_Text_4
+# 1037 "data/maps/LittlerootTown/scripts.pory"
+	msgbox LittlerootTown_EventScript_Shrine_Text_5
+# 1038 "data/maps/LittlerootTown/scripts.pory"
+	msgbox LittlerootTown_EventScript_Shrine_Text_6
+# 1039 "data/maps/LittlerootTown/scripts.pory"
+	msgbox LittlerootTown_EventScript_Shrine_Text_7
+# 1040 "data/maps/LittlerootTown/scripts.pory"
+	msgbox LittlerootTown_EventScript_Shrine_Text_8
+# 1041 "data/maps/LittlerootTown/scripts.pory"
+	msgbox LittlerootTown_EventScript_Shrine_Text_9
+# 1042 "data/maps/LittlerootTown/scripts.pory"
+	releaseall
+	return
+
+
 LittlerootTown_EventScript_BerryfieldSign_Text_0:
 # 1026 "data/maps/LittlerootTown/scripts.pory"
 	.string "Berry Fields$"
+
+LittlerootTown_EventScript_Shrine_Text_0:
+# 1032 "data/maps/LittlerootTown/scripts.pory"
+	.string "OLD MAN: This is Littleroots shrine...$"
+
+LittlerootTown_EventScript_Shrine_Text_1:
+# 1033 "data/maps/LittlerootTown/scripts.pory"
+	.string "Legends say a mythical Pokemon\nis living here.$"
+
+LittlerootTown_EventScript_Shrine_Text_2:
+# 1034 "data/maps/LittlerootTown/scripts.pory"
+	.string "The God of berries...$"
+
+LittlerootTown_EventScript_Shrine_Text_3:
+# 1035 "data/maps/LittlerootTown/scripts.pory"
+	.string "Well, this is a myth...$"
+
+LittlerootTown_EventScript_Shrine_Text_4:
+# 1036 "data/maps/LittlerootTown/scripts.pory"
+	.string "Who knows if it's even true?$"
+
+LittlerootTown_EventScript_Shrine_Text_5:
+# 1037 "data/maps/LittlerootTown/scripts.pory"
+	.string "Anyways!$"
+
+LittlerootTown_EventScript_Shrine_Text_6:
+# 1038 "data/maps/LittlerootTown/scripts.pory"
+	.string "You are not allowed to enter!$"
+
+LittlerootTown_EventScript_Shrine_Text_7:
+# 1039 "data/maps/LittlerootTown/scripts.pory"
+	.string "Come back when you're stronger.$"
+
+LittlerootTown_EventScript_Shrine_Text_8:
+# 1040 "data/maps/LittlerootTown/scripts.pory"
+	.string "I'm sure we will meet again, {PLAYER}!$"
+
+LittlerootTown_EventScript_Shrine_Text_9:
+# 1041 "data/maps/LittlerootTown/scripts.pory"
+	.string "Goodbye.$"

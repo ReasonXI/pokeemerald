@@ -1026,3 +1026,18 @@ script LittlerootTown_EventScript_BerryfieldSign {
     msgbox("Berry Fields")
     releaseall
 }
+
+script LittlerootTown_EventScript_Shrine {
+	lockall
+	msgbox("OLD MAN: This is Littleroots shrine...")
+	msgbox("Legends say a mythical Pokemon\nis living here.")
+	msgbox("The God of berries...")
+	msgbox("Well, this is a myth...")
+	msgbox("Who knows if it's even true?")
+	msgbox("Anyways!")
+	msgbox("You are not allowed to enter!")
+	msgbox("Come back when you're stronger.")
+	msgbox("I'm sure we will meet again, {PLAYER}!")
+	msgbox("Goodbye.")
+	releaseall
+}

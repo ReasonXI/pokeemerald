@@ -4430,6 +4430,26 @@
       "secondary_tileset": "gTileset_Cave",
       "border_filepath": "data/layouts/MysticCave/border.bin",
       "blockdata_filepath": "data/layouts/MysticCave/map.bin"
+    },
+    {
+      "id": "LAYOUT_FORGOTTEN_CAVE",
+      "name": "ForgottenCave_Layout",
+      "width": 60,
+      "height": 60,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/ForgottenCave/border.bin",
+      "blockdata_filepath": "data/layouts/ForgottenCave/map.bin"
+    },
+    {
+      "id": "LAYOUT_SHRINEOFTHE_BERRYGOD",
+      "name": "ShrineoftheBerrygod_Layout",
+      "width": 30,
+      "height": 30,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_BattleArena",
+      "border_filepath": "data/layouts/ShrineoftheBerrygod/border.bin",
+      "blockdata_filepath": "data/layouts/ShrineoftheBerrygod/map.bin"
     }
   ]
 }

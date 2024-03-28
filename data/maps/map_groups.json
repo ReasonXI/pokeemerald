@@ -431,7 +431,9 @@
     "TerraCave_End",
     "AlteringCave",
     "MeteorFalls_StevensCave",
-    "MysticCave"
+    "MysticCave",
+    "ForgottenCave",
+    "ShrineoftheBerrygod"
   ],
   "gMapGroup_IndoorDynamic": [
     "SecretBase_RedCave1",
