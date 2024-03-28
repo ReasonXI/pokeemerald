@@ -2055,26 +2055,48 @@ LittlerootTown_EventScript_Shrine::
 # 1031 "data/maps/LittlerootTown/scripts.pory"
 	lockall
 # 1032 "data/maps/LittlerootTown/scripts.pory"
-	msgbox LittlerootTown_EventScript_Shrine_Text_0
+	faceplayer
 # 1033 "data/maps/LittlerootTown/scripts.pory"
-	msgbox LittlerootTown_EventScript_Shrine_Text_1
+	msgbox LittlerootTown_EventScript_Shrine_Text_0
 # 1034 "data/maps/LittlerootTown/scripts.pory"
-	msgbox LittlerootTown_EventScript_Shrine_Text_2
+	msgbox LittlerootTown_EventScript_Shrine_Text_1
 # 1035 "data/maps/LittlerootTown/scripts.pory"
-	msgbox LittlerootTown_EventScript_Shrine_Text_3
+	msgbox LittlerootTown_EventScript_Shrine_Text_2
 # 1036 "data/maps/LittlerootTown/scripts.pory"
-	msgbox LittlerootTown_EventScript_Shrine_Text_4
+	msgbox LittlerootTown_EventScript_Shrine_Text_3
 # 1037 "data/maps/LittlerootTown/scripts.pory"
-	msgbox LittlerootTown_EventScript_Shrine_Text_5
+	msgbox LittlerootTown_EventScript_Shrine_Text_4
 # 1038 "data/maps/LittlerootTown/scripts.pory"
-	msgbox LittlerootTown_EventScript_Shrine_Text_6
+	msgbox LittlerootTown_EventScript_Shrine_Text_5
 # 1039 "data/maps/LittlerootTown/scripts.pory"
-	msgbox LittlerootTown_EventScript_Shrine_Text_7
+	msgbox LittlerootTown_EventScript_Shrine_Text_6
 # 1040 "data/maps/LittlerootTown/scripts.pory"
-	msgbox LittlerootTown_EventScript_Shrine_Text_8
+	msgbox LittlerootTown_EventScript_Shrine_Text_7
 # 1041 "data/maps/LittlerootTown/scripts.pory"
-	msgbox LittlerootTown_EventScript_Shrine_Text_9
+	msgbox LittlerootTown_EventScript_Shrine_Text_8
 # 1042 "data/maps/LittlerootTown/scripts.pory"
+	msgbox LittlerootTown_EventScript_Shrine_Text_9
+# 1043 "data/maps/LittlerootTown/scripts.pory"
+	releaseall
+	return
+
+
+LittlerootTown_EventScript_Scientist::
+# 1047 "data/maps/LittlerootTown/scripts.pory"
+	lockall
+# 1048 "data/maps/LittlerootTown/scripts.pory"
+	faceplayer
+# 1049 "data/maps/LittlerootTown/scripts.pory"
+	msgbox LittlerootTown_EventScript_Scientist_Text_0
+# 1050 "data/maps/LittlerootTown/scripts.pory"
+	msgbox LittlerootTown_EventScript_Scientist_Text_1
+# 1051 "data/maps/LittlerootTown/scripts.pory"
+	msgbox LittlerootTown_EventScript_Scientist_Text_2
+# 1052 "data/maps/LittlerootTown/scripts.pory"
+	msgbox LittlerootTown_EventScript_Scientist_Text_3
+# 1053 "data/maps/LittlerootTown/scripts.pory"
+	msgbox LittlerootTown_EventScript_Scientist_Text_4
+# 1054 "data/maps/LittlerootTown/scripts.pory"
 	releaseall
 	return
 
@@ -2084,41 +2106,61 @@ LittlerootTown_EventScript_BerryfieldSign_Text_0:
 	.string "Berry Fields$"
 
 LittlerootTown_EventScript_Shrine_Text_0:
-# 1032 "data/maps/LittlerootTown/scripts.pory"
+# 1033 "data/maps/LittlerootTown/scripts.pory"
 	.string "OLD MAN: This is Littleroots shrine...$"
 
 LittlerootTown_EventScript_Shrine_Text_1:
-# 1033 "data/maps/LittlerootTown/scripts.pory"
+# 1034 "data/maps/LittlerootTown/scripts.pory"
 	.string "Legends say a mythical Pokemon\nis living here.$"
 
 LittlerootTown_EventScript_Shrine_Text_2:
-# 1034 "data/maps/LittlerootTown/scripts.pory"
+# 1035 "data/maps/LittlerootTown/scripts.pory"
 	.string "The God of berries...$"
 
 LittlerootTown_EventScript_Shrine_Text_3:
-# 1035 "data/maps/LittlerootTown/scripts.pory"
+# 1036 "data/maps/LittlerootTown/scripts.pory"
 	.string "Well, this is a myth...$"
 
 LittlerootTown_EventScript_Shrine_Text_4:
-# 1036 "data/maps/LittlerootTown/scripts.pory"
+# 1037 "data/maps/LittlerootTown/scripts.pory"
 	.string "Who knows if it's even true?$"
 
 LittlerootTown_EventScript_Shrine_Text_5:
-# 1037 "data/maps/LittlerootTown/scripts.pory"
+# 1038 "data/maps/LittlerootTown/scripts.pory"
 	.string "Anyways!$"
 
 LittlerootTown_EventScript_Shrine_Text_6:
-# 1038 "data/maps/LittlerootTown/scripts.pory"
+# 1039 "data/maps/LittlerootTown/scripts.pory"
 	.string "You are not allowed to enter!$"
 
 LittlerootTown_EventScript_Shrine_Text_7:
-# 1039 "data/maps/LittlerootTown/scripts.pory"
+# 1040 "data/maps/LittlerootTown/scripts.pory"
 	.string "Come back when you're stronger.$"
 
 LittlerootTown_EventScript_Shrine_Text_8:
-# 1040 "data/maps/LittlerootTown/scripts.pory"
+# 1041 "data/maps/LittlerootTown/scripts.pory"
 	.string "I'm sure we will meet again, {PLAYER}!$"
 
 LittlerootTown_EventScript_Shrine_Text_9:
-# 1041 "data/maps/LittlerootTown/scripts.pory"
+# 1042 "data/maps/LittlerootTown/scripts.pory"
 	.string "Goodbye.$"
+
+LittlerootTown_EventScript_Scientist_Text_0:
+# 1049 "data/maps/LittlerootTown/scripts.pory"
+	.string "SCIENTIST: Oh, Hello {PLAYER}!$"
+
+LittlerootTown_EventScript_Scientist_Text_1:
+# 1050 "data/maps/LittlerootTown/scripts.pory"
+	.string "How's your adventure going?\nAre you making good progress?$"
+
+LittlerootTown_EventScript_Scientist_Text_2:
+# 1051 "data/maps/LittlerootTown/scripts.pory"
+	.string "Please come visit me again when\nyou managed to complete your Pokedex!$"
+
+LittlerootTown_EventScript_Scientist_Text_3:
+# 1052 "data/maps/LittlerootTown/scripts.pory"
+	.string "Then I will have a very special reward\nfor you!$"
+
+LittlerootTown_EventScript_Scientist_Text_4:
+# 1053 "data/maps/LittlerootTown/scripts.pory"
+	.string "Good luck {PLAYER}.$"

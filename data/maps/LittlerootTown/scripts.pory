@@ -1029,6 +1029,7 @@ script LittlerootTown_EventScript_BerryfieldSign {
 
 script LittlerootTown_EventScript_Shrine {
 	lockall
+	faceplayer
 	msgbox("OLD MAN: This is Littleroots shrine...")
 	msgbox("Legends say a mythical Pokemon\nis living here.")
 	msgbox("The God of berries...")
@@ -1039,5 +1040,16 @@ script LittlerootTown_EventScript_Shrine {
 	msgbox("Come back when you're stronger.")
 	msgbox("I'm sure we will meet again, {PLAYER}!")
 	msgbox("Goodbye.")
+	releaseall
+}
+
+script LittlerootTown_EventScript_Scientist{
+	lockall
+	faceplayer
+	msgbox("SCIENTIST: Oh, Hello {PLAYER}!")
+	msgbox("How's your adventure going?\nAre you making good progress?")
+	msgbox("Please come visit me again when\nyou managed to complete your Pokedex!")
+	msgbox("Then I will have a very special reward\nfor you!")
+	msgbox("Good luck {PLAYER}.")
 	releaseall
 }
