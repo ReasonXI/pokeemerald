@@ -1,4 +1,4 @@
-.set LOCALID_JIRACHI, 1
+.set LOCALID_JIRACHI, 4
 
 AlteringCave_MapScripts::
 	map_script MAP_SCRIPT_ON_RESUME, AlteringCave_OnResume
@@ -94,4 +94,3 @@ AlteringCave_EventScript_OldMan_Text_3:
 
 AlteringCave_EventScript_OldMan_Text_4:
 	.string "OLD MAN: Good Luck {PLAYER}.$"
-	
