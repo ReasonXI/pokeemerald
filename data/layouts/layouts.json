@@ -4480,6 +4480,16 @@
       "secondary_tileset": "gTileset_Fortree",
       "border_filepath": "data/layouts/JungleCave/border.bin",
       "blockdata_filepath": "data/layouts/JungleCave/map.bin"
+    },
+    {
+      "id": "LAYOUT_AURORA_CAVE",
+      "name": "AuroraCave_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/AuroraCave/border.bin",
+      "blockdata_filepath": "data/layouts/AuroraCave/map.bin"
     }
   ]
 }

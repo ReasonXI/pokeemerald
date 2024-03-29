@@ -1073,3 +1073,5 @@ Common_EventScript_LegendaryFlewAway::
 	.include "data/maps/FieryCave/scripts.inc"
 
 	.include "data/maps/JungleCave/scripts.inc"
+
+	.include "data/maps/AuroraCave/scripts.inc"
