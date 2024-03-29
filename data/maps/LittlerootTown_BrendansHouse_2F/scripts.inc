@@ -291,7 +291,8 @@ PlayersHouse_2F_Text_Notebook:
 	.string "You're playing Pokémon Emerald\n"
 	.string "Remastered Edition created by Reason.\p"
 	.string "Special thanks goes to:\n"
-	.string "Kayrecx, Kasen, pret, TeamAquasHideout.\p"
+	.string "Kayrecx, Kasen, RavePossum,\p"
+	.string "pret Community,\nand TeamAquasHideout Community.\p"
 	.string "Enjoy playing!$"
 
 Common_Text_LookCloserAtMap:
