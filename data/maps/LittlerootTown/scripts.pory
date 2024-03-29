@@ -8,6 +8,7 @@ LittlerootTown_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, LittlerootTown_OnTransition
 	map_script MAP_SCRIPT_ON_FRAME_TABLE, LittlerootTown_OnFrame
 	map_script MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE, LittlerootTown_OnWarp
+	map_script MAP_SCRIPT_ON_LOAD, SetNpcX
 	.byte 0
 
 	@ State descriptions for VAR_LITTLEROOT_TOWN_STATE
@@ -39,10 +40,10 @@ LittlerootTown_MapScripts::
 	@ 3: Met Rival
 	@ 4: Received Pokedex
 
-
 LittlerootTown_OnTransition:
 	setflag FLAG_VISITED_LITTLEROOT_TOWN
 	call Common_EventScript_SetupRivalGfxId
+	call_if_set FLAG_SYS_GAME_CLEAR, SetNpcX
 	call_if_eq VAR_LITTLEROOT_INTRO_STATE, 2, LittlerootTown_EventScript_MoveMomToMaysDoor
 	call_if_unset FLAG_RESCUED_BIRCH, LittlerootTown_EventScript_SetTwinPos
 	call_if_eq VAR_LITTLEROOT_TOWN_STATE, 3, LittlerootTown_EventScript_SetMomStandingInFrontOfDoorPos
@@ -53,6 +54,14 @@ LittlerootTown_OnTransition:
 	call_if_eq VAR_DEX_UPGRADE_JOHTO_STARTER_STATE, 1, LittlerootTown_EventScript_HideMapNamePopup
 	call_if_eq VAR_DEX_UPGRADE_JOHTO_STARTER_STATE, 2, LittlerootTown_EventScript_LeftLabAfterDexUpgrade
 	end
+
+SetNpcX::
+	goto_if_set FLAG_SYS_GAME_CLEAR, SetNpcX_1
+	return
+
+SetNpcX_1:
+	setobjectxyperm 21, 30, 18
+	return
 
 LittlerootTown_EventScript_LeftLabAfterDexUpgrade::
 	setvar VAR_DEX_UPGRADE_JOHTO_STARTER_STATE, 3
@@ -1030,15 +1039,8 @@ script LittlerootTown_EventScript_BerryfieldSign {
 script LittlerootTown_EventScript_Shrine {
 	lockall
 	faceplayer
-	msgbox("OLD MAN: This is Littleroots shrine...")
-	msgbox("Legends say a mythical Pokemon\nis living here.")
-	msgbox("The God of berries...")
-	msgbox("Well, this is a myth...")
-	msgbox("Who knows if it's even true?")
-	msgbox("Anyways!")
-	msgbox("You are only allowed to enter if")
-	msgbox("you've proven that you're strong enough.")
-	msgbox("I'm sure we will meet again, {PLAYER}!")
+	msgbox("OLD MAN: If you have proven yourself\nstrong enough...")
+	msgbox("OLD MAN: I'll let you enter this shrine.\nGood Luck {PLAYER}.")
 	releaseall
 }
 
