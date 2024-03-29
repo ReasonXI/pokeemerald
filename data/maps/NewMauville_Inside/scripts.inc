@@ -1,14 +1,23 @@
+.set LOCALID_ZAPDOS, 9
 NewMauville_Inside_MapScripts::
 	map_script MAP_SCRIPT_ON_RESUME, NewMauville_Inside_OnResume
 	map_script MAP_SCRIPT_ON_TRANSITION, NewMauville_Inside_OnTransition
 	map_script MAP_SCRIPT_ON_LOAD, NewMauville_Inside_OnLoad
+	map_script MAP_SCRIPT_ON_LOAD, NewMauville_Inside_SetNpcX
 	.byte 0
 
 NewMauville_Inside_OnResume:
+	call_if_set FLAG_SYS_CTRL_OBJ_DELETE, NewMauville_Inside_EventScript_TryRemoveZapdos
 	call_if_eq VAR_TEMP_1, 1, NewMauville_Inside_EventScript_SetBarrierStateBlueButton
 	call_if_eq VAR_TEMP_2, 1, NewMauville_Inside_EventScript_SetBarrierStateGreenButton
 	call_if_set FLAG_SYS_CTRL_OBJ_DELETE, NewMauville_Inside_EventScript_TryRemoveVoltorb
 	end
+
+NewMauville_Inside_EventScript_TryRemoveZapdos::
+	specialvar VAR_RESULT, GetBattleOutcome
+	goto_if_ne VAR_RESULT, B_OUTCOME_CAUGHT, Common_EventScript_NopReturn
+	removeobject LOCALID_ZAPDOS
+	return
 
 NewMauville_Inside_EventScript_TryRemoveVoltorb::
 	specialvar VAR_RESULT, GetBattleOutcome
@@ -19,10 +28,25 @@ NewMauville_Inside_EventScript_TryRemoveVoltorb::
 NewMauville_Inside_OnTransition:
 	setvar VAR_TEMP_1, 0
 	setvar VAR_TEMP_2, 0
+	call_if_set FLAG_SYS_GAME_CLEAR, NewMauville_Inside_SetNpcX
+	call_if_unset FLAG_DEFEATED_ZAPDOS, NewMauville_Inside_EventScript_ShowZapdos
 	call_if_unset FLAG_DEFEATED_VOLTORB_1_NEW_MAUVILLE, NewMauville_Inside_EventScript_ShowVoltorb1
 	call_if_unset FLAG_DEFEATED_VOLTORB_2_NEW_MAUVILLE, NewMauville_Inside_EventScript_ShowVoltorb2
 	call_if_unset FLAG_DEFEATED_VOLTORB_3_NEW_MAUVILLE, NewMauville_Inside_EventScript_ShowVoltorb3
 	end
+
+NewMauville_Inside_SetNpcX::
+	goto_if_set FLAG_SYS_GAME_CLEAR, NewMauville_Inside_SetNpcX_1
+	return
+
+NewMauville_Inside_SetNpcX_1:
+	setobjectxyperm 10, 34, 23
+	return
+
+NewMauville_Inside_EventScript_ShowZapdos::
+	clearflag FLAG_HIDE_ZAPDOS
+	setvar VAR_TEMP_1, 1
+	return
 
 NewMauville_Inside_EventScript_ShowVoltorb1::
 	clearflag FLAG_HIDE_NEW_MAUVILLE_VOLTORB_1
@@ -173,6 +197,29 @@ NewMauville_Inside_EventScript_GeneratorOff::
 	releaseall
 	end
 
+NewMauville_Inside_EventScript_Zapdos::
+	lockall
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
+	waitmovement 0
+	waitse
+	playmoncry SPECIES_ZAPDOS, CRY_MODE_ENCOUNTER
+	delay 40
+	waitmoncry
+	setvar VAR_LAST_TALKED, LOCALID_ZAPDOS
+	setwildbattle SPECIES_ZAPDOS, 50
+	setflag FLAG_SYS_CTRL_OBJ_DELETE
+	special BattleSetup_StartLegendaryBattle
+	waitstate
+	clearflag FLAG_SYS_CTRL_OBJ_DELETE
+	setvar VAR_TEMP_1, 0
+	specialvar VAR_RESULT, GetBattleOutcome
+	goto_if_eq VAR_RESULT, B_OUTCOME_WON, NewMauville_Inside_EventScript_DefeatedZapdos
+	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, NewMauville_Inside_EventScript_RanFromZapdos
+	goto_if_eq VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, NewMauville_Inside_EventScript_RanFromZapdos
+	setflag FLAG_DEFEATED_ZAPDOS
+	releaseall
+	end
+
 NewMauville_Inside_EventScript_Voltorb1::
 	lock
 	faceplayer
@@ -190,6 +237,16 @@ NewMauville_Inside_EventScript_Voltorb1::
 	goto_if_eq VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, NewMauville_Inside_EventScript_DefeatedVoltorb1
 	setflag FLAG_DEFEATED_VOLTORB_1_NEW_MAUVILLE
 	release
+	end
+
+NewMauville_Inside_EventScript_DefeatedZapdos::
+	setflag FLAG_DEFEATED_ZAPDOS
+	goto Common_EventScript_RemoveStaticPokemon
+	end
+
+NewMauville_Inside_EventScript_RanFromZapdos::
+	setvar VAR_0x8004, SPECIES_ZAPDOS
+	goto Common_EventScript_LegendaryFlewAway
 	end
 
 NewMauville_Inside_EventScript_DefeatedVoltorb1::
@@ -261,3 +318,22 @@ NewMauville_Inside_Text_SteppedOnSwitchGeneratorStopped:
 	.string "… … … … … … … …\p"
 	.string "The generator appears to have\n"
 	.string "stopped…$"
+
+	NewMauville_Inside_EventScript_Scientist::
+	lockall
+	faceplayer
+	msgbox NewMauville_Inside_EventScript_Scientist_Text_0
+	msgbox NewMauville_Inside_EventScript_Scientist_Text_1
+	msgbox NewMauville_Inside_EventScript_Scientist_Text_2
+	releaseall
+	return
+
+
+NewMauville_Inside_EventScript_Scientist_Text_0:
+	.string "SCIENTIST: The Pokemon behind me\nis out of control!$"
+
+NewMauville_Inside_EventScript_Scientist_Text_1:
+	.string "SCIENTIST: I'll let you pass\nwhen you're strong enough.$"
+
+NewMauville_Inside_EventScript_Scientist_Text_2:
+	.string "SCIENTIST: Good Luck {PLAYER}.$"
