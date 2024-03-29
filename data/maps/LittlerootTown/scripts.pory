@@ -1047,10 +1047,10 @@ script LittlerootTown_EventScript_Shrine {
 script LittlerootTown_EventScript_Scientist{
 	lockall
 	faceplayer
-	msgbox("SCIENTIST: Oh, Hello {PLAYER}!")
-	msgbox("How's your adventure going?\nAre you making good progress?")
-	msgbox("Please come visit me again when\nyou managed to complete your Pokedex!")
-	msgbox("Then I will have a very special reward\nfor you!")
-	msgbox("Good luck {PLAYER}.")
+	msgbox("FLORIAN: Oh, Hello {PLAYER}!")
+	msgbox("FLORIAN: How's your adventure going?\nAre you making good progress?")
+	msgbox("FLORIAN: Did you know theres a\nsecret cave on Route 103?")
+	msgbox("FLORIAN: Maybe you can find out how\nto open the cave!")
+	msgbox("FLORIAN: Good luck {PLAYER}.")
 	releaseall
 }

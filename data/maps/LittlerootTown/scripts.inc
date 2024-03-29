@@ -2117,20 +2117,20 @@ LittlerootTown_EventScript_Shrine_Text_1:
 
 LittlerootTown_EventScript_Scientist_Text_0:
 # 1050 "data/maps/LittlerootTown/scripts.pory"
-	.string "SCIENTIST: Oh, Hello {PLAYER}!$"
+	.string "FLORIAN: Oh, Hello {PLAYER}!$"
 
 LittlerootTown_EventScript_Scientist_Text_1:
 # 1051 "data/maps/LittlerootTown/scripts.pory"
-	.string "How's your adventure going?\nAre you making good progress?$"
+	.string "FLORIAN: How's your adventure going?\nAre you making good progress?$"
 
 LittlerootTown_EventScript_Scientist_Text_2:
 # 1052 "data/maps/LittlerootTown/scripts.pory"
-	.string "Please come visit me again when\nyou managed to complete your Pokedex!$"
+	.string "FLORIAN: Did you know theres a\nsecret cave on Route 103?$"
 
 LittlerootTown_EventScript_Scientist_Text_3:
 # 1053 "data/maps/LittlerootTown/scripts.pory"
-	.string "Then I will have a very special reward\nfor you!$"
+	.string "FLORIAN: Maybe you can find out how\nto open the cave!$"
 
 LittlerootTown_EventScript_Scientist_Text_4:
 # 1054 "data/maps/LittlerootTown/scripts.pory"
-	.string "Good luck {PLAYER}.$"
+	.string "FLORIAN: Good luck {PLAYER}.$"

@@ -84,7 +84,7 @@ JungleCave_EventScript_Ranger_Text_1:
 	.string "RANGER: I'll let you fight this Pokemon.$"
 
 JungleCave_EventScript_Ranger_Text_2:
-	.string "RANGER: But only if you\nare strong enough$"
+	.string "RANGER: But only if you\nare strong enough.$"
 
 JungleCave_EventScript_Ranger_Text_3:
 	.string "RANGER: Good Luck {PLAYER}.$"

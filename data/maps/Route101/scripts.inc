@@ -300,3 +300,25 @@ Route101_Text_RouteSign:
 	.string "ROUTE 101\n"
 	.string "{UP_ARROW} OLDALE TOWN$"
 
+Route101_EventScript_Kai::
+	lockall
+	faceplayer
+	msgbox Route101_EventScript_Kai_Text_0
+	msgbox Route101_EventScript_Kai_Text_1
+	msgbox Route101_EventScript_Kai_Text_2
+	msgbox Route101_EventScript_Kai_Text_3
+	releaseall
+	return
+
+
+Route101_EventScript_Kai_Text_0:
+	.string "KAI: Hey {PLAYER}!$"
+
+Route101_EventScript_Kai_Text_1:
+	.string "KAI: Did you know you can obtain\nall 386 Pokemon in this Game?$"
+
+Route101_EventScript_Kai_Text_2:
+	.string "KAI: Some are only obtainable via\nevolving or other special methods.$"
+
+Route101_EventScript_Kai_Text_3:
+	.string "KAI: Good Luck {PLAYER}.\nCatch them all!$"
