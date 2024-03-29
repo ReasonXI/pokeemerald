@@ -2075,28 +2075,26 @@ LittlerootTown_EventScript_Shrine::
 # 1041 "data/maps/LittlerootTown/scripts.pory"
 	msgbox LittlerootTown_EventScript_Shrine_Text_8
 # 1042 "data/maps/LittlerootTown/scripts.pory"
-	msgbox LittlerootTown_EventScript_Shrine_Text_9
-# 1043 "data/maps/LittlerootTown/scripts.pory"
 	releaseall
 	return
 
 
 LittlerootTown_EventScript_Scientist::
-# 1047 "data/maps/LittlerootTown/scripts.pory"
+# 1046 "data/maps/LittlerootTown/scripts.pory"
 	lockall
-# 1048 "data/maps/LittlerootTown/scripts.pory"
+# 1047 "data/maps/LittlerootTown/scripts.pory"
 	faceplayer
-# 1049 "data/maps/LittlerootTown/scripts.pory"
+# 1048 "data/maps/LittlerootTown/scripts.pory"
 	msgbox LittlerootTown_EventScript_Scientist_Text_0
-# 1050 "data/maps/LittlerootTown/scripts.pory"
+# 1049 "data/maps/LittlerootTown/scripts.pory"
 	msgbox LittlerootTown_EventScript_Scientist_Text_1
-# 1051 "data/maps/LittlerootTown/scripts.pory"
+# 1050 "data/maps/LittlerootTown/scripts.pory"
 	msgbox LittlerootTown_EventScript_Scientist_Text_2
-# 1052 "data/maps/LittlerootTown/scripts.pory"
+# 1051 "data/maps/LittlerootTown/scripts.pory"
 	msgbox LittlerootTown_EventScript_Scientist_Text_3
-# 1053 "data/maps/LittlerootTown/scripts.pory"
+# 1052 "data/maps/LittlerootTown/scripts.pory"
 	msgbox LittlerootTown_EventScript_Scientist_Text_4
-# 1054 "data/maps/LittlerootTown/scripts.pory"
+# 1053 "data/maps/LittlerootTown/scripts.pory"
 	releaseall
 	return
 
@@ -2131,36 +2129,32 @@ LittlerootTown_EventScript_Shrine_Text_5:
 
 LittlerootTown_EventScript_Shrine_Text_6:
 # 1039 "data/maps/LittlerootTown/scripts.pory"
-	.string "You are not allowed to enter!$"
+	.string "You are only allowed to enter if$"
 
 LittlerootTown_EventScript_Shrine_Text_7:
 # 1040 "data/maps/LittlerootTown/scripts.pory"
-	.string "Come back when you're stronger.$"
+	.string "you've proven that you're strong enough.$"
 
 LittlerootTown_EventScript_Shrine_Text_8:
 # 1041 "data/maps/LittlerootTown/scripts.pory"
 	.string "I'm sure we will meet again, {PLAYER}!$"
 
-LittlerootTown_EventScript_Shrine_Text_9:
-# 1042 "data/maps/LittlerootTown/scripts.pory"
-	.string "Goodbye.$"
-
 LittlerootTown_EventScript_Scientist_Text_0:
-# 1049 "data/maps/LittlerootTown/scripts.pory"
+# 1048 "data/maps/LittlerootTown/scripts.pory"
 	.string "SCIENTIST: Oh, Hello {PLAYER}!$"
 
 LittlerootTown_EventScript_Scientist_Text_1:
-# 1050 "data/maps/LittlerootTown/scripts.pory"
+# 1049 "data/maps/LittlerootTown/scripts.pory"
 	.string "How's your adventure going?\nAre you making good progress?$"
 
 LittlerootTown_EventScript_Scientist_Text_2:
-# 1051 "data/maps/LittlerootTown/scripts.pory"
+# 1050 "data/maps/LittlerootTown/scripts.pory"
 	.string "Please come visit me again when\nyou managed to complete your Pokedex!$"
 
 LittlerootTown_EventScript_Scientist_Text_3:
-# 1052 "data/maps/LittlerootTown/scripts.pory"
+# 1051 "data/maps/LittlerootTown/scripts.pory"
 	.string "Then I will have a very special reward\nfor you!$"
 
 LittlerootTown_EventScript_Scientist_Text_4:
-# 1053 "data/maps/LittlerootTown/scripts.pory"
+# 1052 "data/maps/LittlerootTown/scripts.pory"
 	.string "Good luck {PLAYER}.$"

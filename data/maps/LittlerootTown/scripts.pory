@@ -1036,10 +1036,9 @@ script LittlerootTown_EventScript_Shrine {
 	msgbox("Well, this is a myth...")
 	msgbox("Who knows if it's even true?")
 	msgbox("Anyways!")
-	msgbox("You are not allowed to enter!")
-	msgbox("Come back when you're stronger.")
+	msgbox("You are only allowed to enter if")
+	msgbox("you've proven that you're strong enough.")
 	msgbox("I'm sure we will meet again, {PLAYER}!")
-	msgbox("Goodbye.")
 	releaseall
 }
 
