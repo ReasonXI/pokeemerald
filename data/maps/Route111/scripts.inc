@@ -11,6 +11,7 @@ Route111_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, Route111_OnTransition
 	map_script MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE, Route111_OnWarp
 	map_script MAP_SCRIPT_ON_FRAME_TABLE, Route111_OnFrame
+	map_script MAP_SCRIPT_ON_LOAD, Route111SetNpcX
 	.byte 0
 
 Route111_OnLoad:
@@ -48,6 +49,7 @@ Route111_EventScript_ShowTemporaryMirageTower::
 Route111_OnTransition:
 	setvar VAR_TRAINER_HILL_IS_ACTIVE, 0
 	special SetMirageTowerVisibility
+	call_if_set FLAG_SYS_GAME_CLEAR, Route111SetNpcX
 	call_if_unset FLAG_MIRAGE_TOWER_VISIBLE, Route111_EventScript_SetLayoutNoMirageTower
 	call_if_eq VAR_MIRAGE_TOWER_STATE, 1, Route111_EventScript_SetFallingPlayerGfx
 	call_if_eq VAR_MIRAGE_TOWER_STATE, 2, Route111_EventScript_SetMirageTowerGone
@@ -55,6 +57,14 @@ Route111_OnTransition:
 	call GabbyAndTy_EventScript_UpdateLocation
 	goto_if_not_defeated TRAINER_VICKY, Route111_EventScript_SetWinstratesNotDefeated
 	end
+
+Route111SetNpcX::
+	goto_if_set FLAG_SYS_GAME_CLEAR, Route111SetNpcX_1
+	return
+
+Route111SetNpcX_1:
+	setobjectxyperm 47, 32, 3
+	return
 
 Route111_EventScript_SetFallingPlayerGfx::
 	checkplayergender
@@ -727,3 +737,21 @@ Route111_Text_TrainerHillSign:
 	.string "“Scale the heights, you hot-blooded\n"
 	.string "TRAINERS!”$"
 
+Route111_EventScript_OldMan::
+	lockall
+	faceplayer
+	msgbox Route111_EventScript_OldMan_Text_0
+	msgbox Route111_EventScript_OldMan_Text_1
+	msgbox Route111_EventScript_OldMan_Text_2
+	releaseall
+	return
+
+
+Route111_EventScript_OldMan_Text_0:
+	.string "OLD MAN: If you have proven yourself\nstrong enough...$"
+
+Route111_EventScript_OldMan_Text_1:
+	.string "OLD MAN: I'll let you enter this Cave.$"
+
+Route111_EventScript_OldMan_Text_2:
+	.string "OLD MAN: Good Luck {PLAYER}.$"

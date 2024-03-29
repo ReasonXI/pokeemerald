@@ -434,7 +434,8 @@
     "MysticCave",
     "ForgottenCave",
     "ShrineoftheBerrygod",
-    "SeafoamCave"
+    "SeafoamCave",
+    "FieryCave"
   ],
   "gMapGroup_IndoorDynamic": [
     "SecretBase_RedCave1",

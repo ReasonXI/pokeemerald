@@ -1069,3 +1069,5 @@ Common_EventScript_LegendaryFlewAway::
 	.include "data/maps/ShrineoftheBerrygod/scripts.inc"
 
 	.include "data/maps/SeafoamCave/scripts.inc"
+
+	.include "data/maps/FieryCave/scripts.inc"
