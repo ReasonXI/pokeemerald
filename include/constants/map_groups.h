@@ -406,6 +406,7 @@
 #define MAP_SHRINEOFTHE_BERRYGOD                     (110 | (24 << 8))
 #define MAP_SEAFOAM_CAVE                             (111 | (24 << 8))
 #define MAP_FIERY_CAVE                               (112 | (24 << 8))
+#define MAP_JUNGLE_CAVE                              (113 | (24 << 8))
 
 // gMapGroup_IndoorDynamic
 #define MAP_SECRET_BASE_RED_CAVE1    (0 | (25 << 8))
@@ -600,5 +601,3 @@
 #define MAP_GROUPS_COUNT 34
 
 #endif // GUARD_CONSTANTS_MAP_GROUPS_H
-// static const u8 MAP_GROUP_COUNT[] = {57, 5, 5, 6, 7, 8, 9, 7, 7, 14, 8, 17, 10, 23, 13, 15, 15, 2, 2, 2, 3, 1, 2, 1, 113, 61, 89, 2, 1, 13, 1, 1, 3, 1, 0};
-
