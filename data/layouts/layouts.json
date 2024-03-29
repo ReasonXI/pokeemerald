@@ -4450,6 +4450,16 @@
       "secondary_tileset": "gTileset_BattleArena",
       "border_filepath": "data/layouts/ShrineoftheBerrygod/border.bin",
       "blockdata_filepath": "data/layouts/ShrineoftheBerrygod/map.bin"
+    },
+    {
+      "id": "LAYOUT_SEAFOAM_CAVE",
+      "name": "SeafoamCave_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/SeafoamCave/border.bin",
+      "blockdata_filepath": "data/layouts/SeafoamCave/map.bin"
     }
   ]
 }

@@ -2,6 +2,7 @@ Route129_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, Route129_OnTransition
 	map_script MAP_SCRIPT_ON_LOAD, Route129_OnLoad
 	map_script MAP_SCRIPT_ON_FRAME_TABLE, Route129_OnFrame
+	map_script MAP_SCRIPT_ON_LOAD, Route129SetNpcX
 	.byte 0
 
 Route129_OnLoad:
@@ -14,7 +15,16 @@ Route129_OnTransition:
 	call_if_ge VAR_SOOTOPOLIS_CITY_STATE, 4, Route129_EventScript_CheckSetAbnormalWeather
 	call_if_eq VAR_ABNORMAL_WEATHER_LOCATION, ABNORMAL_WEATHER_ROUTE_129_WEST, AbnormalWeather_StartKyogreWeather
 	call_if_eq VAR_ABNORMAL_WEATHER_LOCATION, ABNORMAL_WEATHER_ROUTE_129_EAST, AbnormalWeather_StartKyogreWeather
+	call_if_set FLAG_SYS_GAME_CLEAR, Route129SetNpcX
 	end
+
+	Route129SetNpcX::
+	goto_if_set FLAG_SYS_GAME_CLEAR, Route129SetNpcX_1
+	return
+
+Route129SetNpcX_1:
+	setobjectxyperm 6, 18, 14
+	return
 
 Route129_EventScript_CheckSetAbnormalWeather::
 	call_if_set FLAG_SYS_WEATHER_CTRL, Common_EventScript_SetAbnormalWeather
@@ -48,4 +58,24 @@ Route129_EventScript_Clarence::
 	trainerbattle_single TRAINER_CLARENCE, Route129_Text_ClarenceIntro, Route129_Text_ClarenceDefeat
 	msgbox Route129_Text_ClarencePostBattle, MSGBOX_AUTOCLOSE
 	end
+
+Route129_EventScript_OldMan::
+	lockall
+	faceplayer
+	msgbox Route129_EventScript_OldMan_Text_0
+	msgbox Route129_EventScript_OldMan_Text_1
+	msgbox Route129_EventScript_OldMan_Text_2
+	releaseall
+	return
+
+
+Route129_EventScript_OldMan_Text_0:
+	.string "OLD MAN: If you have proven yourself\nstrong enough...$"
+
+Route129_EventScript_OldMan_Text_1:
+	.string "OLD MAN: I'll let you enter this Cave.$"
+
+Route129_EventScript_OldMan_Text_2:
+	.string "OLD MAN: Good Luck {PLAYER}.$"
+
 
