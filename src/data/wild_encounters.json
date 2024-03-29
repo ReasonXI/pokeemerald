@@ -11616,7 +11616,7 @@
               {
                 "min_level": 30,
                 "max_level": 30,
-                "species": "SPECIES_LARVITAR"
+                "species": "SPECIES_UNOWN"
               }
             ]
           }
@@ -11683,9 +11683,9 @@
                 "species": "SPECIES_URSARING"
               },
               {
-                "min_level": 68,
-                "max_level": 68,
-                "species": "SPECIES_AGGRON"
+                "min_level": 16,
+                "max_level": 21,
+                "species": "SPECIES_LARVITAR"
               }
             ]
           }
