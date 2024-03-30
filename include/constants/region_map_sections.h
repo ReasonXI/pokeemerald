@@ -216,7 +216,13 @@
 #define MAPSEC_TRAINER_HILL                 0xD4
 #define MAPSEC_MYSTERIOUS_CAVE              0xD5
 #define MAPSEC_EVOLUTION_MART               0xD6
-#define MAPSEC_NONE                         0xD7
+#define MAPSEC_FORGOTTEN_CAVE               0xD7
+#define MAPSEC_BERRYGOD_SHRINE              0xD8
+#define MAPSEC_SEAFOAM_CAVE                 0xD9
+#define MAPSEC_FIERY_CAVE                   0xDA
+#define MAPSEC_JUNGLE_CAVE                  0xDB
+#define MAPSEC_AURORA_CAVE                  0xDC
+#define MAPSEC_NONE                         0xDE
 
 #define METLOC_SPECIAL_EGG                  0xFD
 #define METLOC_IN_GAME_TRADE                0xFE

@@ -1725,6 +1725,54 @@
       "y": 0,
       "width": 1,
       "height": 1
+    },
+    {
+      "map_section": "MAPSEC_FORGOTTEN_CAVE",
+      "name": "FORGOTTEN CAVE",
+      "x": 22,
+      "y": 12,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "map_section": "MAPSEC_BERRYGOD_SHRINE",
+      "name": "BERRYGOD SHRINE",
+      "x": 4,
+      "y": 11,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "map_section": "MAPSEC_SEAFOAM_CAVE",
+      "name": "SEAFOAM CAVE",
+      "x": 24,
+      "y": 10,
+      "width": 2,
+      "height": 1
+    },
+    {
+      "map_section": "MAPSEC_FIERY_CAVE",
+      "name": "FIERY CAVE",
+      "x": 8,
+      "y": 0,
+      "width": 1,
+      "height": 6
+    },
+    {
+      "map_section": "MAPSEC_JUNGLE_CAVE",
+      "name": "JUNGLE CAVE",
+      "x": 11,
+      "y": 0,
+      "width": 1,
+      "height": 6
+    },    
+    {
+      "map_section": "MAPSEC_AURORA_CAVE",
+      "name": "AURORA CAVE",
+      "x": 0,
+      "y": 2,
+      "width": 1,
+      "height": 3
     }
   ]
 }
